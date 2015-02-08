@@ -1,0 +1,89 @@
+/*[ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}*/
+#container {
+  position: absolute;
+  background-color: #c2bcad;
+  margin: auto 100px;
+  font-family: 'Cookie', cursive;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  /*
+  font-family: 'Calligraffitti', cursive;
+  font-family: 'Meie Script', cursive; 4 stylish
+  font-family: 'Cookie', cursive; 5 cute
+  font-family: 'Monsieur La Doulaise', cursive;
+  */
+}
+#app-name p{
+  margin-top:30px;
+  padding: 15px 15px;
+  margin-left: 15px;
+  background-color: #cedcf6;
+  font-size:75px ;
+  width: 800px;
+  height:100px;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 2px dotted #799cdd;
+}
+#events-header {
+  margin-left: 50px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: #3399FF;
+}
+
+a:visited {
+  color: #3399FF;
+}
+
+#event-list li{
+  display: inline;
+}
+#event-list ul{
+  width: 800px;
+  height:80px;
+  background-color: #f7f7f7;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 20px 20px;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#date-list {
+  font-size: 35px
+}
+#address-list {
+  font-size: 20px
+}
+#title-list {
+  font-size:50px
+}
+#time-list {
+  font-size: 35px
+}
+#event-grid {
+
+}
+
+/*LIST
+single sheet of paper with hand drawn line between events?
+each event looks like its written by hand
+*/
+
+/*Grid
+more like calender with old fashioned font
+*/
+
+/*
+TODO
+update form field...add properties : start time and end time,
+date picker?
+*/

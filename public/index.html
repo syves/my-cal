@@ -8,45 +8,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
     <title>myCal</title>
-    data
-
-    <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-    <style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #todo-list              { margin-bottom:30px; }
-    </style>
-
-    <!-- SPELLS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <link rel="stylesheet" href="styles/cal.css"></link>
+    <link href='http://fonts.googleapis.com/css?family=Calligraffitti|Meie+Script|Cookie|Monsieur+La+Doulaise' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="core.js"></script>
-
 </head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS -->
 <body ng-controller="mainController">
-    <div class="container">
+    <div id="container">
+      <div id='app-name'>
+        <p>My Calendar</p>
+      </div>
 
-        <div class="jumbotron text-center">
-            <h1>All my events <span class="label label-info">{{ events.length }}</span></h1>
+        <div id="events-header">
+            <h1><span class="label label-info">{{ events.length }}</span>Upcomming Events</h1>
         </div>
 
+        <button type="submit" class="" ng-click="toggleView()">grid view</button>
 
-        <div id="todo-list" class="row">
+
+        <div id="event-list">
             <div class="col-sm-4 col-sm-offset-4">
 
-                <div class="checkbox" ng-repeat="event in events">
-                    <label>
-                        <input type="checkbox" ng-click="deleteEvent(event._id)"> {{ event.title }}
-                    </label>
+                <div class='event-list' ng-repeat="event in events">
+                  <ul>
+                    <li id='date-list'>Date</li>
+                    <li id='title-list'>{{ event.title }}</li>
+                    <li id='address-list'>{{ event.address }}</li>
+                    <li id='time-list'>{{ event.time }}</li>
+                   </ul>
                 </div>
-
             </div>
         </div>
 
+          <div id="event-grid">
+            <div class="col-sm-4 col-sm-offset-4">
+
+                <div class='list' ng-repeat="event in events">
+                    <p>Title {{ event.title }}</p>
+                    <p>Address {{ event.address }}</p>
+                    <p>Time {{ event.time }}</p>
+                </div>
+            </div>
+          </div>
+
         <!-- FORM TO CREATE TODOS -->
         <div id="todo-form" class="row">
+          <h2>Create a new Event</h2>
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>
                     <div class="form-group">
@@ -61,7 +69,7 @@
                     <button type="submit" class="btn btn-primary btn-lg" ng-click="createEvent()">Add</button>
                 </form>
             </div>
-        </div>
+        </div> <!--closes todo form-->
 
     </div>
 
