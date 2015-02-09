@@ -13,8 +13,9 @@
   font-family: 'Monsieur La Doulaise', cursive;
   */
 }
-#app-name p{
+#app-name p {
   margin-top:30px;
+  margin-bottom: 0;
   padding: 15px 15px;
   margin-left: 15px;
   background-color: #cedcf6;
@@ -26,20 +27,54 @@
   -webkit-border-radius: 5px;
   border: 2px dotted #799cdd;
 }
-#events-header {
+#info h2 {
   margin-left: 50px;
+  font-size: 55px;
+}
+#info {
+  position: relative;
+}
+#info button {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  width: 200px;
+  height: 75px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #f0dba5;
+  font-family: 'Cookie', cursive;
+  font-size: 35px;
 }
 
-a:hover {
-  text-decoration: none;
+#event-form {
+  margin-left: 55px;
+}
+#event-form input{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: center;
 }
 
-a {
-  color: #3399FF;
+#event-form button {
+  width: 70px;
+  height: 30px;
+  font-family: 'Cookie', cursive;
+  font-size: 25px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: center;
 }
 
-a:visited {
-  color: #3399FF;
+#form-wrapper {
+  position: relative;
+}
+#form-wrapper button {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  font-family: 'Cookie', cursive;
+  font-size: 25px;
 }
 
 #event-list li{
@@ -57,21 +92,31 @@ a:visited {
   -webkit-border-radius: 5px;
 }
 
-#date-list {
+.date {
   font-size: 35px
 }
-#address-list {
+.address {
   font-size: 20px
 }
-#title-list {
+.title {
   font-size:50px
 }
-#time-list {
+.time {
   font-size: 35px
 }
-#event-grid {
-
+#event-grid ul{
+  width: 200px;
+  height:200px;
+  background-color: #f7f7f7;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 20px 20px;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  float: left;
 }
+#event-grid li{display:block;}
 
 /*LIST
 single sheet of paper with hand drawn line between events?
