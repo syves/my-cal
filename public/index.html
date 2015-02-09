@@ -6,13 +6,12 @@
 
     <title>myCal</title>
     <link rel="stylesheet" href="styles/cal.css"></link>
-    <link href='http://fonts.googleapis.com/css?family=Calligraffitti|Meie+Script|Cookie|Monsieur+La+Doulaise' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="core.js"></script>
 
 </head>
@@ -28,11 +27,11 @@
                 <form>
                     <div class="form-group">
                         <input type="text"  placeholder="event name" ng-model="formData.title">
-                        <input type="text"  id="datepicker"placeholder="date" ng-model="formData.date">
-                        <input type="text"  placeholder="Start time" ng-model="formData.time">
-
-                         <input type="text"  placeholder="End time" ng-model="formData.endTime">
                         <input type="text"  placeholder="address" ng-model="formData.address">
+                        <input type="text"  id="start-datepicker"placeholder="start date" ng-model="formData.date">
+                        <input type="text"  id="end-datepicker"placeholder="end date" ng-model="formData.endDate">
+                        <select id='start-time' ng-model="modelStartTimeOptions" ng-options="s.name for s in startTimeOptions" required></select>
+                        <select id='end-time' ng-model="modelEndTimeOptions" ng-options="s.name for s in endTimeOptions" required></select>
                     </div>
                     <button type="submit" ng-click="createEvent()">Submit</button>
                 </form>
@@ -47,24 +46,28 @@
       <div id='view-container' data-active='event-list'>
         <!-- Events views -->
           <div id="event-list" >
-                  <div class='event-list' ng-repeat="event in events">
-                    <ul>
-                      <li class='date'>Date</li>
-                      <li class='title'>{{ event.title }}</li>
-                      <li class='address'>{{ event.address }}</li>
-                      <li class='time'>{{ event.time }}</li>
-                     </ul>
-                  </div>
+            <div class='event-list' ng-repeat="event in events">
+              <ul>
+                <li class='date'>{{ event.date }}</li>
+                <li class='date'>{{ event.endDate }}</li>
+                <li class='title'>{{ event.title }}</li>
+                <li class='address'>{{ event.address }}</li>
+                <li class='time'>{{ event.time }}</li>
+                <li class='time'>{{ event.endTime }}</li>
+               </ul>
+            </div>
           </div>
 
             <div id="event-grid" >
               <div class='list' ng-repeat="event in events">
-                  <ul>
-                    <li class='date'>Date</li>
-                    <li class='title'>{{ event.title }}</li>
-                    <li class='address'>{{ event.address }}</li>
-                    <li class='time'>{{ event.time }}</li>
-                 </ul>
+                 <ul>
+                   <li class='date'>{{ event.date }}</li>
+                   <li class='date'>{{ event.endDate }}</li>
+                   <li class='title'>{{ event.title }}</li>
+                   <li class='address'>{{ event.address }}</li>
+                   <li class='time'>{{ event.time }}</li>
+                   <li class='time'>{{ event.endTime }}</li>
+                </ul>
               </div>
             </div>
           </div>

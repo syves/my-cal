@@ -3,20 +3,36 @@ var myCal = angular.module('myCal', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};
-    //$scope.visible = true;
+
+    //------START end END time select
+    $scope.startTimeOptions = [
+        { name: 'Start Time', value: '1' },
+        { name: '1:00 AM', value: '2' },
+        { name: '2:30 AM', value: '3' },
+        { name: '3:00 AM', value: '4' },
+    ];
+    $scope.modelStartTimeOptions = $scope.startTimeOptions[0];
+
+      $scope.endTimeOptions = [
+        { name: 'End Time', value: '1' },
+        { name: '1:00 AM', value: '2' },
+        { name: '2:30 AM', value: '3' },
+        { name: '3:00 AM', value: '4' },
+    ];
+    $scope.modelEndTimeOptions = $scope.endTimeOptions[0];
+
+    //------date picker
     $(function() {
         $( "#datepicker" ).datepicker();
       });
-
+    //-------Toggle view
     $scope.toggleView = function() {
-        //$scope.visible = !$scope.visible;
         var el =document.getElementById('view-container')
         var active = el.getAttribute('data-active')
         el.setAttribute("data-active", active === 'event-list' ? 'event-grid' : 'event-list')
     }
 
-    // when landing on the page, get all todos and show them
-
+//----------------------------data
     $http.get('/api/events')
         .success(function(data) {
             $scope.events = data;

@@ -58,8 +58,8 @@ border: 2px dotted #799cdd;
   -webkit-border-radius: 5px;
   text-align: center;
   width: 270;
-  height: 40px;
-  font-size: 20px;
+  height: 15px;
+  font-size: 15px;
 }
 
 #event-form button {
@@ -137,6 +137,13 @@ border: 2px dotted #799cdd;
 #event-grid li{
   display:block;
   margin-bottom: 15px;
+}
+
+select#start-time{
+  font-size: 30px;
+}
+select#end-time {
+  font-size: 30px;
 }
 
 /*LIST
