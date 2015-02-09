@@ -23,7 +23,8 @@ function mainController($scope, $http) {
 
     //------date picker
     $(function() {
-        $( "#datepicker" ).datepicker();
+        $( "#start-datepicker" ).datepicker();
+        $( "#end-datepicker" ).datepicker();
       });
     //-------Toggle view
     $scope.toggleView = function() {
@@ -44,8 +45,10 @@ function mainController($scope, $http) {
 
     // when submitting the add form, send the text to the node API
     $scope.createEvent = function() {
+        console.log($scope.formData)
         $http.post('/api/events', $scope.formData)
             .success(function(data) {
+
                 $scope.formData = {}; // clear the form so our user is ready to enter another
                 $scope.events = data;
                 console.log(data);
@@ -55,7 +58,7 @@ function mainController($scope, $http) {
             });
     };
 
-    // delete a todo after checking it
+    // delete an event ---not complete
     $scope.deleteEvent = function(id) {
         $http.delete('/api/events/' + id)
             .success(function(data) {
