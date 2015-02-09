@@ -18,7 +18,7 @@
       </div>
       <!-- FORM TO CREATE EVENTS -->
         <div id="event-form">
-          <h2>Create a new Event</h2>
+          <h1>Create a new Event</h1>
             <div id='form-wrapper'>
                 <form>
                     <div class="form-group">
@@ -33,35 +33,34 @@
         </div> <!--closes event form-->
 
       <div id='info'>
-        <h2><span class="label label-info">{{ events.length }}</span> Upcoming events</h2>
-        <button  type="submit" class="" ng-click="toggleView()">grid view</button>
+        <h1><span class="label label-info">{{ events.length }}</span> Upcoming events</h1>
+        <button ng-click="toggleView()">toggle view</button>
       </div>
 
+      <div id='view-container' data-active='event-list'>
+        <!-- Events views -->
+          <div id="event-list" >
+                  <div class='event-list' ng-repeat="event in events">
+                    <ul>
+                      <li class='date'>Date</li>
+                      <li class='title'>{{ event.title }}</li>
+                      <li class='address'>{{ event.address }}</li>
+                      <li class='time'>{{ event.time }}</li>
+                     </ul>
+                  </div>
+          </div>
 
-
-
-        <div id="event-list">
-                <div class='event-list' ng-repeat="event in events">
+            <div id="event-grid" >
+              <div class='list' ng-repeat="event in events">
                   <ul>
                     <li class='date'>Date</li>
                     <li class='title'>{{ event.title }}</li>
                     <li class='address'>{{ event.address }}</li>
                     <li class='time'>{{ event.time }}</li>
-                   </ul>
-                </div>
-        </div>
-
-          <div id="event-grid">
-            <div class='list' ng-repeat="event in events">
-                <ul>
-                  <li class='date'>Date</li>
-                  <li class='title'>{{ event.title }}</li>
-                  <li class='address'>{{ event.address }}</li>
-                  <li class='time'>{{ event.time }}</li>
-               </ul>
+                 </ul>
+              </div>
             </div>
           </div>
-
     </div><!--closes container-->
 
 </body>

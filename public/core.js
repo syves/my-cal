@@ -3,6 +3,14 @@ var myCal = angular.module('myCal', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};
+    //$scope.visible = true;
+
+    $scope.toggleView = function() {
+        //$scope.visible = !$scope.visible;
+        var el =document.getElementById('view-container')
+        var active = el.getAttribute('data-active')
+        el.setAttribute("data-active", active === 'event-list' ? 'event-grid' : 'event-list')
+    }
 
     // when landing on the page, get all todos and show them
 

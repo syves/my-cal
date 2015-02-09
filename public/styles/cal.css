@@ -1,8 +1,12 @@
 /*[ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}*/
+body {
+}
+
 #container {
   position: absolute;
   background-color: #c2bcad;
-  margin: auto 100px;
+  width: 100%;
+  margin: auto 50px;
   font-family: 'Cookie', cursive;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -14,29 +18,28 @@
   */
 }
 #app-name p {
-  margin-top:30px;
-  margin-bottom: 0;
-  padding: 15px 15px;
-  margin-left: 15px;
-  background-color: #cedcf6;
-  font-size:75px ;
-  width: 800px;
-  height:100px;
-  text-align: center;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 2px dotted #799cdd;
+margin: 15px 50px 15px;
+padding: 15px 15px;
+background-color: #cedcf6;
+font-size: 75px;
+width: 90%;
+height: 100px;
+text-align: center;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 2px dotted #799cdd;
 }
-#info h2 {
-  margin-left: 50px;
-  font-size: 55px;
+#info h1 {
+  margin-left: 75px;
+  font-size: 75px;
 }
 #info {
   position: relative;
+  height: 100px;
 }
 #info button {
   position: absolute;
-  right: 50px;
+  right: 75px;
   top: 0;
   width: 200px;
   height: 75px;
@@ -54,27 +57,40 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   text-align: center;
+  width: 270;
+  height: 40px;
+  font-size: 20px;
 }
 
 #event-form button {
-  width: 70px;
-  height: 30px;
+  width: 100px;
+  height: 50px;
   font-family: 'Cookie', cursive;
-  font-size: 25px;
+  font-size: 30px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   text-align: center;
 }
+
 
 #form-wrapper {
   position: relative;
 }
 #form-wrapper button {
   position: absolute;
-  right: 200px;
+  right: 330px;
   top: 0;
   font-family: 'Cookie', cursive;
-  font-size: 25px;
+  font-size: 30px;
+}
+#event-list,
+#event-grid {
+  display :none;
+}
+#view-container[data-active="event-list"] #event-list,
+#view-container[data-active="event-grid"] #event-grid {
+  display :block;
+  margin: auto 75px;
 }
 
 #event-list li{
