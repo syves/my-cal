@@ -1,7 +1,3 @@
-/*[ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}*/
-body {
-}
-
 #container {
   position: absolute;
   background-color: #c2bcad;
@@ -10,13 +6,8 @@ body {
   font-family: 'Cookie', cursive;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  /*
-  font-family: 'Calligraffitti', cursive;
-  font-family: 'Meie Script', cursive; 4 stylish
-  font-family: 'Cookie', cursive; 5 cute
-  font-family: 'Monsieur La Doulaise', cursive;
-  */
 }
+
 #app-name p {
 margin: 15px 50px 15px;
 padding: 15px 15px;
@@ -29,14 +20,17 @@ text-align: center;
 -webkit-border-radius: 5px;
 border: 2px dotted #799cdd;
 }
+
 #info h1 {
   margin-left: 75px;
   font-size: 75px;
 }
+
 #info {
   position: relative;
   height: 100px;
 }
+
 #info button {
   position: absolute;
   right: 75px;
@@ -53,6 +47,7 @@ border: 2px dotted #799cdd;
 #event-form {
   margin-left: 55px;
 }
+
 #event-form input{
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -76,6 +71,7 @@ border: 2px dotted #799cdd;
 #form-wrapper {
   position: relative;
 }
+
 #form-wrapper button {
   position: absolute;
   right: 110px;
@@ -83,21 +79,24 @@ border: 2px dotted #799cdd;
   font-family: 'Cookie', cursive;
   font-size: 30px;
 }
+
 #event-list,
 #event-grid {
   display :none;
   margin-bottom: 20px;
 }
+
 #view-container[data-active="event-list"] #event-list,
 #view-container[data-active="event-grid"] #event-grid {
   display :block;
   margin: auto 75px;
 }
 
-#event-list li{
+#event-list li {
   display: inline;
   margin-right: 30px;
 }
+
 #event-list ul{
   width: 800px;
   height:80px;
@@ -113,16 +112,20 @@ border: 2px dotted #799cdd;
 .date {
   font-size: 35px
 }
+
 .address {
   font-size: 20px
 }
+
 .title {
   font-size:50px
 }
+
 .time {
   font-size: 35px
 }
-#event-grid ul{
+
+#event-grid ul {
   width: 200px;
   height:200px;
   background-color: #f7f7f7;
@@ -134,29 +137,16 @@ border: 2px dotted #799cdd;
   -webkit-border-radius: 5px;
   float: left;
 }
-#event-grid li{
+
+#event-grid li {
   display:block;
   margin-bottom: 15px;
 }
 
-select#start-time{
+select#start-time {
   font-size: 30px;
 }
+
 select#end-time {
   font-size: 30px;
 }
-
-/*LIST
-single sheet of paper with hand drawn line between events?
-each event looks like its written by hand
-*/
-
-/*Grid
-more like calender with old fashioned font
-*/
-
-/*
-TODO
-update form field...add properties : start time and end time,
-date picker?
-*/

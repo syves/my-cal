@@ -21,30 +21,30 @@
         <p>My Calendar</p>
       </div>
       <!-- FORM TO CREATE EVENTS -->
-        <div id="event-form">
-          <h1>Create a new Event</h1>
-            <div id='form-wrapper'>
-                <form>
-                    <div class="form-group">
-                        <input type="text"  placeholder="event name" ng-model="formData.title">
-                        <input type="text"  placeholder="address" ng-model="formData.address">
-                        <input type="text"  id="start-datepicker" placeholder="start date" ng-model="formData.date">
-                        <input type="text"  id="end-datepicker" placeholder="end date" ng-model="formData.endDate">
-                        <select id='start-time' ng-model="modelStartTimeOptions" ng-options="s.name for s in startTimeOptions" required></select>
-                        <select id='end-time' ng-model="modelEndTimeOptions" ng-options="s.name for s in endTimeOptions" required></select>
-                    </div>
-                    <button type="submit" ng-click="createEvent()">Submit</button>
-                </form>
+      <div id="event-form">
+      <h1>Create a new Event</h1>
+        <div id='form-wrapper'>
+          <form>
+            <div class="form-group">
+              <input type="text"  placeholder="event name" ng-model="formData.title">
+              <input type="text"  placeholder="address" ng-model="formData.address">
+              <input type="text"  id="start-datepicker" placeholder="start date" ng-model="formData.date">
+              <input type="text"  id="end-datepicker" placeholder="end date" ng-model="formData.endDate">
+              <select id='start-time' ng-model="modelStartTimeOptions" ng-options="s.name for s in startTimeOptions" required></select>
+              <select id='end-time' ng-model="modelEndTimeOptions" ng-options="s.name for s in endTimeOptions" required></select>
             </div>
+            <button type="submit" ng-click="createEvent()">Submit</button>
+          </form>
+          </div> <!--wrapper-->
         </div> <!--closes event form-->
 
-      <div id='info'>
-        <h1><span class="label label-info">{{ events.length }}</span> Upcoming events</h1>
-        <button ng-click="toggleView()">toggle view</button>
-      </div>
+        <div id='info'>
+          <h1><span class="label label-info">{{ events.length }}</span> Upcoming events</h1>
+          <button ng-click="toggleView()">toggle view</button>
+        </div>
 
-      <div id='view-container' data-active='event-list'>
         <!-- Events views -->
+        <div id='view-container' data-active='event-list'>
           <div id="event-list" >
             <div class='event-list' ng-repeat="event in events">
               <ul>
@@ -56,7 +56,7 @@
                 <li class='time'>{{ event.endTime }}</li>
                </ul>
             </div>
-          </div>
+            </div>
 
             <div id="event-grid" >
               <div class='list' ng-repeat="event in events">
@@ -72,6 +72,5 @@
             </div>
           </div>
     </div><!--closes container-->
-
 </body>
 </html>

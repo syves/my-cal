@@ -1,4 +1,3 @@
-// public/core.js
 var myCal = angular.module('myCal', []);
 
 function mainController($scope, $http) {
@@ -48,8 +47,8 @@ function mainController($scope, $http) {
         console.log($scope.formData)
         $http.post('/api/events', $scope.formData)
             .success(function(data) {
-
-                $scope.formData = {}; // clear the form so our user is ready to enter another
+                // clear the form so our user is ready to enter another
+                $scope.formData = {};
                 $scope.events = data;
                 console.log(data);
             })
@@ -69,5 +68,4 @@ function mainController($scope, $http) {
                 console.log('Error: ' + data);
             });
     };
-
 }
