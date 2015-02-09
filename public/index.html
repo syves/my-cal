@@ -7,9 +7,14 @@
     <title>myCal</title>
     <link rel="stylesheet" href="styles/cal.css"></link>
     <link href='http://fonts.googleapis.com/css?family=Calligraffitti|Meie+Script|Cookie|Monsieur+La+Doulaise' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="core.js"></script>
+
 </head>
 <body ng-controller="mainController">
     <div id="container">
@@ -23,9 +28,11 @@
                 <form>
                     <div class="form-group">
                         <input type="text"  placeholder="event name" ng-model="formData.title">
-                        <input type="text"  placeholder="date" ng-model="formData.date">
-                        <input type="text"  placeholder="time" ng-model="formData.address">
-                        <input type="text"  placeholder="address" ng-model="formData.time">
+                        <input type="text"  id="datepicker"placeholder="date" ng-model="formData.date">
+                        <input type="text"  placeholder="Start time" ng-model="formData.time">
+
+                         <input type="text"  placeholder="End time" ng-model="formData.endTime">
+                        <input type="text"  placeholder="address" ng-model="formData.address">
                     </div>
                     <button type="submit" ng-click="createEvent()">Submit</button>
                 </form>

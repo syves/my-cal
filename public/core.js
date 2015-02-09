@@ -4,6 +4,9 @@ var myCal = angular.module('myCal', []);
 function mainController($scope, $http) {
     $scope.formData = {};
     //$scope.visible = true;
+    $(function() {
+        $( "#datepicker" ).datepicker();
+      });
 
     $scope.toggleView = function() {
         //$scope.visible = !$scope.visible;

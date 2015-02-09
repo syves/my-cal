@@ -78,7 +78,7 @@ border: 2px dotted #799cdd;
 }
 #form-wrapper button {
   position: absolute;
-  right: 330px;
+  right: 110px;
   top: 0;
   font-family: 'Cookie', cursive;
   font-size: 30px;
@@ -86,6 +86,7 @@ border: 2px dotted #799cdd;
 #event-list,
 #event-grid {
   display :none;
+  margin-bottom: 20px;
 }
 #view-container[data-active="event-list"] #event-list,
 #view-container[data-active="event-grid"] #event-grid {
@@ -95,6 +96,7 @@ border: 2px dotted #799cdd;
 
 #event-list li{
   display: inline;
+  margin-right: 30px;
 }
 #event-list ul{
   width: 800px;
@@ -132,7 +134,10 @@ border: 2px dotted #799cdd;
   -webkit-border-radius: 5px;
   float: left;
 }
-#event-grid li{display:block;}
+#event-grid li{
+  display:block;
+  margin-bottom: 15px;
+}
 
 /*LIST
 single sheet of paper with hand drawn line between events?
